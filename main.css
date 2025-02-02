@@ -1,0 +1,48 @@
+/* Основной стиль для страницы */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #f09819, #ff512f); /* Градиент фона */
+}
+
+/* Контейнер для часов */
+#clock {
+    display: flex;
+    gap: 20px; /* Расстояние между блоками */
+    padding: 20px;
+    background: #ffb547; /* Цвет вокруг блоков */
+    border-radius: 15px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для блоков часов */
+#clock div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Числа внутри блоков */
+#clock div::before {
+    content: attr(id); /* Отображение "Hours", "Minutes", "Seconds" */
+    font-size: 18px;
+    color: #ffb547; /* Цвет текста подписей */
+    margin-bottom: 10px;
+}
+
+#clock div {
+    font-size: 48px;
+    font-weight: bold;
+}
